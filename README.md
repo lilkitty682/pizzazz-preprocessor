@@ -1,2 +1,7 @@
 # gleammcompiler
-A custom transpiler for gleam to allow multiline comments, and optinally to use semicolons. Can work directly in any gleam project.
+A custom formatter for gleam to allow multiline comments, and optinally to use semicolons. Can work directly in any gleam project.
+Add to gleam project in a folder sibling to src, and put the file in there, although this is recommended, you may put this file anywhere in the project.
+It is by default recursive, to change it, set the value to False in the file
+Use the file extension .gleamm for it to translate it to a .gleam
+To use non-space sensitive semicolon mode, start the file with ;
+To do multiline comments: /* comment */
