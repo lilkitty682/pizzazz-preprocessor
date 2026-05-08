@@ -66,7 +66,7 @@ def translate(text):
 
 
 def process_file(path):
-    output_path = path.replace(".gleamm", ".gleam")
+    output_path = path.replace(".pizzazz", ".gleam")
 
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -96,10 +96,10 @@ print("Scanning src:", src_dir)
 if RECURSIVE:
     for root, dirs, files in os.walk(src_dir):
         for filename in files:
-            if filename.lower().endswith(".gleamm"):
+            if filename.lower().endswith(".pizzazz"):
                 process_file(os.path.join(root, filename))
 else:
     for filename in os.listdir(src_dir):
         full_path = os.path.join(src_dir, filename)
-        if os.path.isfile(full_path) and filename.lower().endswith(".gleamm"):
+        if os.path.isfile(full_path) and filename.lower().endswith(".pizzazz"):
             process_file(full_path)
